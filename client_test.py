@@ -11,7 +11,7 @@ class ClientTest(unittest.TestCase):
     ]
     """ ------------ Add the assertion below ------------ """
     for q in quotes:
-      self.assertEqual(getDataPoint(q), [q['stock'], q['top_bid']['price'], q['top_ask']['price'], ( q['top_bid']['price'] + q['top_ask']['price'])/2])
+      self.assertEqual(getDataPoint(q), (q['stock'], q['top_bid']['price'], q['top_ask']['price'], ( q['top_bid']['price'] + q['top_ask']['price'])/2))
       
        
 
@@ -22,7 +22,7 @@ class ClientTest(unittest.TestCase):
     ]
     """ ------------ Add the assertion below ------------ """
     for q in quotes:
-      self.assertEqual(getDataPoint(q), [q['stock'], q['top_bid']['price'], q['top_ask']['price'], ( q['top_bid']['price'] + q['top_ask']['price'])/2])
+      self.assertEqual(getDataPoint(q), (q['stock'], q['top_bid']['price'], q['top_ask']['price'], ( q['top_bid']['price'] + q['top_ask']['price'])/2))
 
 
   """ ------------ Add more unit tests ------------ """
